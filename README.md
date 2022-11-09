@@ -1,3 +1,10 @@
+## Kooks by terry
+
+E-commerce made with React
+
+Based on NFT real project named "Kooks by Terry", see original project here https://www.streetlab.io/drops/kooks-by-terry
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
