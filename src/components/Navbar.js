@@ -8,8 +8,8 @@ export default function Navbar() {
     <div className="navBar">
       <h3>Kooks by Terry</h3>
       <div className="linksNav">
-        <p><a href="#">Home</a></p>
-        <p><a href="#">About</a></p>
+        <h5><a href="#">Home</a></h5>
+        <h5><a href="#">About</a></h5>
       </div>
       <CartLogo />
     </div>

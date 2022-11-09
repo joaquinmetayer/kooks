@@ -1,36 +1,38 @@
 .logoGif {
-    width: 300px;
-  }
-  .artistPh {
-    width: 500px;
-    padding-bottom: 7px;
-  }
+  width: 300px;
+}
+.artistPh {
+  width: 500px;
+  padding-bottom: 7px;
+}
+.proyect,
+.contactContainer {
+  display: flex;
+  text-align: justify;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.artist {
+  display: flex;
+  gap: 20px;
+  text-align: justify;
+}
+h2{
+  padding-bottom: 5px;
+}
+@media (max-width: 850px) {
   .proyect,
   .contactContainer {
-    display: flex;
-    text-align: justify;
-    gap: 20px;
-    padding-bottom: 20px;
+    flex-direction: column;
   }
   .artist {
-    display: flex;
-    gap: 20px;
-    text-align: justify;
+    flex-direction: column-reverse;
   }
-  
-  @media (max-width: 850px) {
-    .proyect,
-    .contactContainer {
-      flex-direction: column;
-    }
-    .artist {
-      flex-direction: column-reverse;
-    }
-    .artistPh {
-      width: 100%;
-    }
-    .logoGif {
-      width: 100%;
-      padding-top: 10px;
-    }
-  }  
+  .artistPh {
+    width: 100%;
+  }
+  .logoGif {
+    width: 100%;
+    padding-top: 10px;
+  }
+}

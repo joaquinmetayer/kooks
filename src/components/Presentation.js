@@ -9,7 +9,7 @@ export default function About() {
       <div className="proyect">
         <img src={logoGif} alt={logoGif} className="logoGif" />
         <div>
-          <h3>Project Presentation</h3>
+          <h2>Project Presentation</h2>
           <p>
             What’s up, these are the kooks. Born and raised in El Porto, they’ve
             been surfing the world-famous break Shit Pipe since grom days. These
@@ -27,7 +27,7 @@ export default function About() {
       </div>
       <div className="artist">
         <div>
-          <h3>Artist Presentation</h3>
+          <h2>Artist Presentation</h2>
           <p>
             Born and raised in the Midwest, Terry grew up immersed in Saturday
             morning cartoons and collecting trading cards, falling into the
