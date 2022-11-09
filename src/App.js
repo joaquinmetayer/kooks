@@ -4,6 +4,10 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
 function App() {
+
+
+  document.title = 'Kooks by Terry'
+
   return (
     <>
       <Navbar />
