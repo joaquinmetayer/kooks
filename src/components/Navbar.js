@@ -1,19 +1,13 @@
-import { IconName } from "react-icons/md";
 import React from "react";
 import CartLogo from "./CartLogo";
 
-// carticon = MdOutlineShoppingCart
-
-const styles = {};
+import './Navbar.css'
 
 export default function Navbar() {
-  return <div>
-    <div>
-        <img src="" />
-        <h1>Kooks by Terry</h1>
+  return (
+    <div className="navBar">
+      <h3>Kooks by Terry</h3>
+      <CartLogo />
     </div>
-    <div>
-        
-    </div>
-  </div>;
+  );
 }
