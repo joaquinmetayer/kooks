@@ -1,5 +1,5 @@
 .cardContainer{
-    width: 200px;
+    width: 250px;
 }
 .cardContainer img{
     width: 100%;
@@ -20,4 +20,9 @@
     background-color: #ffffff10;
     font-weight: bold;
     cursor: pointer;
+}
+@media (max-width: 500px) {
+    .cardContainer{
+        width: 100%;
+    }
 }
