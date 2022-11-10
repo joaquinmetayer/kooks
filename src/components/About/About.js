@@ -1,7 +1,7 @@
 import React from "react";
-import logoGif from "../assets/logogif.gif";
-import artistPh from "../assets/img/artist.jpeg";
-import "./Presentation.css";
+import logoGif from "../../assets/logogif.gif";
+import artistPh from "../../assets/img/artist.jpeg";
+import './About.css'
 
 export default function About() {
   return (

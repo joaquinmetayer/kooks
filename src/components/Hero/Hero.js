@@ -1,6 +1,6 @@
-import VideoHero from "../assets/hero.mp4";
-import Song from "../assets/Burn_It_Down.mp3";
-import Links from "./Links";
+import VideoHero from "../../assets/hero.mp4";
+import Song from "../../assets/Burn_It_Down.mp3";
+import Links from "../Links/Links";
 import "./Hero.css";
 import React, { Component } from "react";
 

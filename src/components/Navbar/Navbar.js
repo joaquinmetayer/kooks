@@ -1,5 +1,5 @@
 import React from "react";
-import CartLogo from "./CartLogo";
+import CartLogo from "../CartLogo/CartLogo";
 
 import './Navbar.css'
 

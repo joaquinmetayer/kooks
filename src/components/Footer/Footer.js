@@ -1,4 +1,4 @@
-import Links from "./Links";
+import Links from "../Links/Links";
 
 import "./Footer.css";
 

@@ -1,7 +1,7 @@
 import { SiTwitter, SiInstagram } from "react-icons/si";
-import Etherscan from "../assets/icons/etherscan.svg";
-import Opensea from "../assets/icons/opensea.svg";
-import Streetlab from "../assets/icons/streetlab.svg";
+import Etherscan from "../../assets/icons/etherscan.svg";
+import Opensea from "../../assets/icons/opensea.svg";
+import Streetlab from "../../assets/icons/streetlab.svg";
 
 import "./Links.css";
 

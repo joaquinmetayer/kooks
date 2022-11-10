@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import "./Card.css";
 
 export default function Card(props) {

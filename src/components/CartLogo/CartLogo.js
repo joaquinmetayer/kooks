@@ -1,6 +1,6 @@
 import { MdOutlineShoppingCart } from "react-icons/md";
 import React from "react";
-import './CartLogo.css'
+import "./CartLogo.css";
 
 export default function CartLogo() {
   return (
