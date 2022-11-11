@@ -1,7 +1,7 @@
-.cardContainer{
+.ItemContainer{
     width: 250px;
 }
-.cardContainer img{
+.ItemContainer img{
     width: 100%;
 }
 .price{
@@ -14,15 +14,20 @@
 .price p{
     padding: 0;
 }
-.addCartBtn{
+.detailsBtn{
     padding: 10px;
     text-align: center;
     background-color: #ffffff10;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.1s;
+}
+.detailsBtn:hover{
+    transition: 0.1s;
+    background-color: #ffffff40;
 }
 @media (max-width: 500px) {
-    .cardContainer{
+    .ItemContainer{
         width: 100%;
     }
 }

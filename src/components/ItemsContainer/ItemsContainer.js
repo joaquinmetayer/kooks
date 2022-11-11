@@ -1,5 +1,5 @@
-import { useState } from "react";
-import Card from "../Card/Card";
+import { useEffect, useState } from "react";
+import Item from "../Item/Item";
 import "./ItemsContainer.css";
 
 export default function ItemsContainer() {
@@ -48,35 +48,18 @@ export default function ItemsContainer() {
     { id: 39, price: 39, date: 2023, img: "./products/01.png" },
     { id: 40, price: 40, date: 2023, img: "./products/02.png" },
   ]);
-  const [itemsLoad, setItemsLoad] = useState();
 
-  function getItems() {
-    return new Promise((resolve, reject) => {
-      if (items.length === 0) {
-        reject(new Error("Data is empty"));
-      }
-      setTimeout(() => {
-        resolve(items);
-        setItemsLoad(items);
-      }, 2000);
-    });
-  }
-
-  getItems()
-    .then((response) => console.log(response))
-    .catch((err) => console.log(err.message));
-    return (
-        <div className="itemsContainer">
-          {items.map((i) => (
-            <Card
-              key={i.id}
-              name={i.id}
-              img={i.img}
-              price={i.price}
-              date={i.date}
-            />
-          ))}
-        </div>
-      );
-  
+  return (
+    <div className="itemsContainer">
+      {items.map((i) => (
+        <Item
+          key={i.id}
+          name={i.id}
+          img={i.img}
+          price={i.price}
+          date={i.date}
+        />
+      ))}
+    </div>
+  );
 }

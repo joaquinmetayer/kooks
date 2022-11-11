@@ -1,17 +1,16 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import "./Card.css";
+import "./Item.css";
 
-export default function Card(props) {
+export default function Item(props) {
   return (
-    <div className="cardContainer">
+    <div className="ItemContainer">
       <img src={props.img} alt={props.id} />
       <div className="price">
         <p>#0{props.name}</p>
-        <ItemCount />
         <p>{props.price} ETH</p>
       </div>
-      <div className="addCartBtn">Add to cart</div>
+      <div className="detailsBtn">View Details</div>
     </div>
   );
 }
