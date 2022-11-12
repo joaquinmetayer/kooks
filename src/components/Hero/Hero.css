@@ -1,11 +1,10 @@
 .heroContainer{
     display: flex;
-    padding-bottom: 20px;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 .videoHero{
-    width: 60%;
+    width: 55%;
 }
 .heroDescription{
     display: flex;
