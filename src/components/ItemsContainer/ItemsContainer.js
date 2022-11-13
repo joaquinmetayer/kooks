@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Item from "../Item/Item";
 import "./ItemsContainer.css";
 
 export default function ItemsContainer() {
-  const [items, setItems] = useState([
+
+  // falta lo de agregar la promesa con un rimeout para imprimir los items...
+  //(si es que asi lo es con la actividad)
+  let [items, setItems] = useState([
     { id: 1, price: 1, date: 2020, img: "./products/01.png" },
     { id: 2, price: 2, date: 2020, img: "./products/02.png" },
     { id: 3, price: 3, date: 2020, img: "./products/03.png" },
