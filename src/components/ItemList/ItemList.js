@@ -1,12 +1,8 @@
 import { useState } from "react";
 import Item from "../Item/Item";
-import "./ItemsContainer.css";
 
-export default function ItemsContainer() {
-  // falta lo de agregar la promesa con un rimeout para imprimir los items...
-  //(si es que asi lo es con la actividad)
-  let [items, setItems] = useState([]);
-  items = [
+export default function ItemList() {
+  let [items, setItems] = useState([
     { id: 1, price: 1, date: 2020, img: "./products/01.png" },
     { id: 2, price: 2, date: 2020, img: "./products/02.png" },
     { id: 3, price: 3, date: 2020, img: "./products/03.png" },
@@ -47,10 +43,10 @@ export default function ItemsContainer() {
     { id: 38, price: 38, date: 2023, img: "./products/038.png" },
     { id: 39, price: 39, date: 2023, img: "./products/01.png" },
     { id: 40, price: 40, date: 2023, img: "./products/02.png" },
-  ];
+  ]);
 
   return (
-    <div className="itemsContainer">
+    <>
       {items.map((i) => (
         <Item
           key={i.id}
@@ -60,7 +56,7 @@ export default function ItemsContainer() {
           date={i.date}
         />
       ))}
-    </div>
+    </>
   );
 }
 
@@ -74,10 +70,7 @@ export default function ItemsContainer() {
         />
       ))}
 
-
-
-
-      CODIGO PROMESA SIN FUNCIONAR
+    CODIGO PROMESA SIN FUNCIONAR
 
     useEffect(() => {
     let MyPromise = new Promise(function (resolve) {

@@ -3,8 +3,7 @@ import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Filter from "./components/Filter/Filter";
-
-import ItemsContainer from './components/ItemsContainer/ItemsContainer'
+import ItemsListContainer from './components/ItemsListContainer/ItemsListContainer'
 
 function App() {
   document.title = "Kooks by Terry";
@@ -14,7 +13,7 @@ function App() {
       <Navbar />
       <Hero />
       <Filter />
-      <ItemsContainer />
+      <ItemsListContainer />
       <About />
       <Footer />
     </>
