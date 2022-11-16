@@ -43,6 +43,4 @@ class Hero extends Component {
   }
 }
 
-//#fafaf8
-
 export default Hero;
