@@ -6,7 +6,7 @@ import './About.css'
 export default function About() {
   return (
     <>
-      <div className="proyect">
+      <div className="proyect" id="about">
         <img src={logoGif} alt={logoGif} className="logoGif" />
         <div>
           <h2>Project Presentation</h2>

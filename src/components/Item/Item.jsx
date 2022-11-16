@@ -1,18 +1,22 @@
 import React from "react";
-import ItemCount from '../ItemCount/ItemCount'
-// import ItemCount from "../ItemCount/ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import "./Item.css";
 
-export default function Item(props) {
+const Item = ({ product }) => {
+  const { id, price, date, img } = product;
+
   return (
     <div className="ItemContainer">
-      <img src={props.img} alt={props.id} />
+      <img src={img} alt={id} />
       <div className="price">
-        <p>#0{props.name}</p>
+        <p>#0{id}</p>
+        <p>{date}</p>
         <ItemCount />
-        <p>{props.price} ETH</p>
+        <p>{price} ETH</p>
       </div>
       <div className="detailsBtn">View Details</div>
     </div>
   );
-}
+};
+
+export default Item;

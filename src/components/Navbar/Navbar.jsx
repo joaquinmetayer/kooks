@@ -9,7 +9,7 @@ export default function Navbar() {
       <h3>Kooks by Terry</h3>
       <div className="linksNav">
         <h5><a href="#">Home</a></h5>
-        <h5><a href="#">About</a></h5>
+        <h5><a href="#about">About</a></h5>
       </div>
       <CartLogo />
     </div>

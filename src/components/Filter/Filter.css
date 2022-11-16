@@ -5,6 +5,11 @@
 }
 .linkFilter{
     cursor: pointer;
+    transition: 0.1s;
+}
+.linkFilter:hover{
+    color: #ffffff60;
+    transition: 0.1s;
 }
 .filterLinkContainer{
     padding-top: 5px;

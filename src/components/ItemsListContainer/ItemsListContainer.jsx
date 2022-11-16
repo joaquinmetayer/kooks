@@ -1,10 +1,25 @@
 import "./ItemsListContainer.css";
 import ItemList from "../ItemList/ItemList";
+import { data } from "../../mock/FaceApi";
+import Loader from "../Loader/Loader";
+import { useState, useEffect } from "react";
 
-export default function ItemsContainer() {
+const ItemsListContainer = () => {
+  const [productsList, setProductsList] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    data
+      .then((res) => setProductsList(res))
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false));
+  }, []);
+
   return (
     <div className="itemsContainer">
-      <ItemList />
+      {loading ? <Loader /> : <ItemList productsList={productsList} />}
     </div>
   );
-}
+};
+
+export default ItemsListContainer;
