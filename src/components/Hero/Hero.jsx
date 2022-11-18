@@ -33,7 +33,7 @@ class Hero extends Component {
             <p>
               What’s up, these are the kooks. Born and raised in El Porto,
               they’ve been surfing the world-famous break Shit...{" "}
-              <a href="#">Read more</a>
+              <a href="#about">Read more</a>
             </p>
             <Links />
           </div>
