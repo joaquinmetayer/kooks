@@ -1,33 +1,52 @@
-.ItemContainer{
-    width: 250px;
+.ItemDetailsContainer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
 }
-.ItemContainer img{
+.ItemDetailsContainer img {
+  width: 350px;
+}
+.detailsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.buyPrice {
+  font-size:25px;
+  font-weight: bold;
+  display: flex;
+  gap: 20px;
+}
+.buttonBuy {
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff10;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s;
+  font-size:20px;
+
+}
+.buttonBuy:hover {
+  transition: 0.1s;
+  background-color: #ffffff40;
+}
+.detailsBigContainer {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .ItemDetailsContainer {
+    flex-direction: column;
+    margin-right: 0;
+  }
+}
+@media (max-width: 600px) {
+  .ItemDetailsContainer img {
     width: 100%;
-}
-.price{
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 5px 0 5px 0;
-    font-weight: bold;
-}
-.price p{
-    padding: 0;
-}
-.detailsBtn{
-    padding: 10px;
-    text-align: center;
-    background-color: #ffffff10;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.1s;
-}
-.detailsBtn:hover{
-    transition: 0.1s;
-    background-color: #ffffff40;
-}
-@media (max-width: 500px) {
-    .ItemContainer{
-        width: 100%;
-    }
+  }
 }

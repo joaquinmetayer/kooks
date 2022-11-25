@@ -3,7 +3,7 @@ const products = [
   { id: 2, price: 2, stock: 10, date: 2020, contract: "0x06b6553B18d9137CFfc481C48251c4B07579a70c", img: "./products/02.png" },
   { id: 3, price: 3, stock: 10, date: 2020, contract: "0x06b6553B18d9137CFfc481C48251c4B07579a70c", img: "./products/03.png" },
   { id: 4, price: 4, stock: 10, date: 2020, contract: "0x06b6553B18d9137CFfc481C48251c4B07579a70c", img: "./products/04.png" },
-  { id: 5, price: 5, stock: 10, date: 2020, contract: "0x06b6553B18d9137CFfc481C48251c4B07579a70c", img: "./products/030.png" },
+  { id: 5, price: 5, stock: 10, date: 2020, contract: "0x06b6553B18d9137CFfc481C48251c4B07579a70c", img: "./products/05.png"},
   { id: 6, price: 6, stock: 10, date: 2020, contract: "0x06b6553B18d9137CFfc481C48251c4B07579a70c", img: "./products/06.png" },
   { id: 7, price: 7, stock: 10, date: 2020, contract: "0x06b6553B18d9137CFfc481C48251c4B07579a70c", img: "./products/07.png" },
   { id: 8, price: 8, stock: 10, date: 2020, contract: "0x06b6553B18d9137CFfc481C48251c4B07579a70c", img: "./products/08.png" },
