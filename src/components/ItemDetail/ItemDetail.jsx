@@ -3,9 +3,12 @@ import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 
 
-const ItemDetail = ({ detailProduct }) => {
-  const { id, price, stock, date, img, contract } = detailProduct;
-
+const ItemDetail = ({ productDetails }) => {
+  const { id, price, stock, date, img, contract } = productDetails;
+ 
+  console.log(productDetails)
+  console.log(img)
+  
   return (
     <div className="ItemContainer">
     <img src={img} alt={id} />
@@ -13,10 +16,10 @@ const ItemDetail = ({ detailProduct }) => {
       <p>#0{id}</p>
       <p>{date}</p>
       <p>{contract}</p>
-      <ItemCount />
+      <ItemCount product={productDetails} />
       <p>{price} ETH</p>
     </div>
-    <div className="detailsBtn">View Details</div>
+   
   </div>
   );
 };

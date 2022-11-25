@@ -6,17 +6,16 @@ import Loader from "../Loader/Loader";
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
-  const [productsList, setProductsList] = useState([]);
   const [productDetails, setProductDetails] = useState({});
   const [loading, setLoading] = useState(true);
   const { detailId } = useParams();
-  
+
   useEffect(() => {
     data
-      .then((resp) => setProductsList(resp))
+      .then((resp) => setProductDetails(resp.find((item)=> item.id == detailId)))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, []);
+  }, [detailId]);
 
   return (
     <div>
