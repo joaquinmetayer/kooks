@@ -8,4 +8,4 @@ Based on NFT real project named "Kooks by Terry", see original project here http
 
 <img src="./src/assets/rm1.png">
 
-<video src="./src/assets/kooks-preview-one.mp4">
+<video src="./src/assets/kooks-preview-one.mp4" autoplay muted>
