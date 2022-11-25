@@ -4,7 +4,7 @@ import Filter from "../Filter/Filter";
 import ItemsListContainer from "../ItemsListContainer/ItemsListContainer";
 
 
-export const Home = () => {
+const HomeContainer = () => {
   return (
     <>
       <Hero />
@@ -14,3 +14,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default HomeContainer

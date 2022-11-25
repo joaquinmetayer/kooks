@@ -2,6 +2,7 @@ import './ItemDetail.css'
 import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 
+
 const ItemDetail = ({ detailProduct }) => {
   const { id, price, stock, date, img, contract } = detailProduct;
 
@@ -12,7 +13,7 @@ const ItemDetail = ({ detailProduct }) => {
       <p>#0{id}</p>
       <p>{date}</p>
       <p>{contract}</p>
-      <ItemCount product={detailProduct} />
+      <ItemCount />
       <p>{price} ETH</p>
     </div>
     <div className="detailsBtn">View Details</div>
