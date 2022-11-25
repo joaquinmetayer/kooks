@@ -8,14 +8,14 @@ import "./ItemDetailContainer.css";
 const ItemDetailContainer = () => {
   const [productDetails, setProductDetails] = useState({});
   const [loading, setLoading] = useState(true);
-  const { detailId } = useParams();
+  const { productId } = useParams();
 
   useEffect(() => {
     data
-      .then((resp) => setProductDetails(resp.find((item)=> item.id == detailId)))
+      .then((resp) => setProductDetails(resp.find((item)=> item.id == productId)))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, [detailId]);
+  }, [productId]);
 
   return (
     <div>

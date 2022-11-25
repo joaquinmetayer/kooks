@@ -7,8 +7,6 @@ const ItemDetail = ({ productDetails }) => {
 
   let [imgDetail, setImgDetail] = useState("." + img);
 
-  console.log(productDetails);
-
   return (
     <div className="detailsBigContainer">
 <div className="ItemDetailsContainer">
