@@ -18,7 +18,7 @@ const ItemsListContainer = () => {
             categoryId
               ? res.filter((product) => product.category == categoryId)
               : res
-          ) // TEST HERE
+          )
       )
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
