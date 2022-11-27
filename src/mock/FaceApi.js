@@ -1,6 +1,6 @@
 const products = [
-  { id: 2, price: 2, stock: 50, date: 2020, category: "2020", contract: "0x06 b6553B 18d9137 CFfc481 C48251c 4B07579a70c", img: "./products/02.png" },
   { id: 1, price: 1, stock: 50, date: 2020, category: "2020", contract: "0x06 b6553B 18d9137 CFfc481 C48251c 4B07579a70c", img: "./products/01.png" },
+  { id: 2, price: 2, stock: 50, date: 2020, category: "2020", contract: "0x06 b6553B 18d9137 CFfc481 C48251c 4B07579a70c", img: "./products/02.png" },
   { id: 3, price: 3, stock: 50, date: 2020, category: "2020", contract: "0x06 b6553B 18d9137 CFfc481 C48251c 4B07579a70c", img: "./products/03.png" },
   { id: 4, price: 4, stock: 50, date: 2020, category: "2020", contract: "0x06 b6553B 18d9137 CFfc481 C48251c 4B07579a70c", img: "./products/04.png" },
   { id: 5, price: 5, stock: 50, date: 2020, category: "2020", contract: "0x06 b6553B 18d9137 CFfc481 C48251c 4B07579a70c", img: "./products/05.png"},
