@@ -12,7 +12,9 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     data
-      .then((resp) => setProductDetails(resp.find((item)=> item.id == productId)))
+      .then((resp) =>
+        setProductDetails(resp.find((item) => item.id == productId))
+      )
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, [productId]);

@@ -1,34 +1,44 @@
 import "./ItemDetail.css";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../context/CartContext";
 
-const ItemDetail = ({ productDetails }) => {
+const ItemDetail = ({ productDetails, onAdd }) => {
   const { id, price, stock, date, img, contract } = productDetails;
 
   let [imgDetail, setImgDetail] = useState("." + img);
 
+  const { addToCart } = useContext(CartContext);
+
+  const handlerOnAdd = (toCart) => {
+    setwasClicked(true);
+    addToCart({ ...productDetails, toCart: toCart });
+  };
+
+  const [wasClicked, setwasClicked] = useState(false);
+
   return (
     <div className="detailsBigContainer">
-<div className="ItemDetailsContainer">
-      <img src={imgDetail} alt={id} />
-      <div className="detailsContainer">
-        <div>
-          <p>#0{id}</p>
-          <p>Date - {date}</p>
-          <p>Stock - {stock}</p>
-          <p>Contract - {contract}</p>
-        </div>
-        <div>
-          <div className="buyPrice">
-            <p>{price} ETH</p>
-            <ItemCount product={productDetails} />
+      <div className="ItemDetailsContainer">
+        <img src={imgDetail} alt={id} />
+        <div className="detailsContainer">
+          <div>
+            <p>#0{id}</p>
+            <p>Date of collection - {date}</p>
+            <p>Stock available - {stock}</p>
+            <p>Contract - {contract}</p>
+            <p>Price - {price} ETH</p>
           </div>
-          <p className="buttonBuy">Add to cart</p>
+          <div>
+            <div className="buyPrice">
+              <ItemCount product={productDetails} onAdd={handlerOnAdd}/>
+            </div>
+            
+          </div>
         </div>
       </div>
     </div>
-    </div>
-    
   );
 };
 

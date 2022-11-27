@@ -16,18 +16,18 @@
 .buyPrice {
   font-size:25px;
   font-weight: bold;
-  display: flex;
   gap: 20px;
+  width: 100%;
 }
 .buttonBuy {
   padding: 10px;
+  margin-top: 10px;
   text-align: center;
   background-color: #ffffff10;
   font-weight: bold;
   cursor: pointer;
   transition: 0.1s;
   font-size:20px;
-
 }
 .buttonBuy:hover {
   transition: 0.1s;
