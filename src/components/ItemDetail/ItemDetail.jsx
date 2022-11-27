@@ -12,11 +12,8 @@ const ItemDetail = ({ productDetails, onAdd }) => {
   const { addToCart } = useContext(CartContext);
 
   const handlerOnAdd = (toCart) => {
-    setwasClicked(true);
     addToCart({ ...productDetails, toCart: toCart });
   };
-
-  const [wasClicked, setwasClicked] = useState(false);
 
   return (
     <div className="detailsBigContainer">
@@ -34,7 +31,6 @@ const ItemDetail = ({ productDetails, onAdd }) => {
             <div className="buyPrice">
               <ItemCount product={productDetails} onAdd={handlerOnAdd}/>
             </div>
-            
           </div>
         </div>
       </div>

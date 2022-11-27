@@ -26,14 +26,14 @@ const CartContextProvider = ({ children }) => {
   const cleanCart = () => {
     setCartList([]);
   };
-  const deteleItem = (id) => {
+  const deleteItem = (id) => {
     setCartList(cartList.filter((product) => product.id !== id));
   };
   const qtyItem = (product) => {
-    return cartList.reduce( (acum, product) => acum = acum + product.toCart , 0 )
+    return cartList.reduce((acum, product) => acum = acum + product.toCart , 0 )
   };
   const totalPrice = () => {
-    // view this
+    return cartList.reduce((acum, value) => (acum +(value.toCart * value.price)), 0)
   };
 
   console.log(cartList);
@@ -44,7 +44,7 @@ const CartContextProvider = ({ children }) => {
         cartList,
         addToCart,
         cleanCart,
-        deteleItem,
+        deleteItem,
         qtyItem,
         totalPrice,
       }}
