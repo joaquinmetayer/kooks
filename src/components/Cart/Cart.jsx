@@ -41,12 +41,12 @@ const Cart = () => {
           <div className="totalCart">
             <p className="totalCartTitle">Total</p>
             <div className="totalCartData">
-              <p>Total price</p>
-              <p>{totalPrice()}</p>
-            </div>
-            <div className="totalCartData">
               <p>Total items</p>
               <p>{qtyItem()}</p>
+            </div>
+            <div className="totalCartData">
+              <p>Total price</p>
+              <p>ETH {totalPrice()}</p>
             </div>
             <div className="buttonsCart">
               <p onClick={() => cleanCart()}>Clean cart</p>
