@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
 import { getFirestore } from "firebase/firestore";
+import NotFound from "../NotFound/NotFound";
 
 const Checkout = () => {
   const { cartList, qtyItem, totalPrice } = useCartContext();
@@ -27,6 +28,9 @@ const Checkout = () => {
 
   return (
     <>
+    {!cartList.length > 0 ? (
+        <NotFound />
+      ) : (
       <div className="cartContainer">
         <p className="cartTitle">Cart</p>
         {cartList.map((product) => (
@@ -80,7 +84,7 @@ const Checkout = () => {
           />
           <button className="endBuy">End buy</button>
         </form>
-      </div>
+      </div>)}
     </>
   );
 };

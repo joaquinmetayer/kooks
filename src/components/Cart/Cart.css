@@ -67,7 +67,7 @@
   width: 100%;
   gap: 10px;
 }
-.buttonsCart p {
+.buttonsCart p, .buttonsCart a {
   width: 100%;
   padding: 12px 10px 10px 10px;
   margin-top: 10px;
