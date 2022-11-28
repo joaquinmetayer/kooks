@@ -50,7 +50,10 @@ const Cart = () => {
             </div>
             <div className="buttonsCart">
               <p onClick={() => cleanCart()}>Clean cart</p>
-              <p>Checkout</p>
+              <p>
+              <Link to={"/checkout"}>
+                Checkout
+              </Link></p>
             </div>
           </div>
         </div>

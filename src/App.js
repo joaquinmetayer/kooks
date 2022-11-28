@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Cart from "./components/Cart/Cart";
+import Checkout from './components/Checkout/Checkout'
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import CartContextProvider from "./context/CartContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -24,6 +25,7 @@ function App() {
           />
           <Route exact path="/:categoryId" element={<HomeContainer />} />
           <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>
