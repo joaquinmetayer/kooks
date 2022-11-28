@@ -3,15 +3,15 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
-  const { id, price, date, img } = product;
+  const { id, price, category, img } = product;
 
   return (
-    <div className={date}>
+    <div className={category}>
       <div className="ItemContainer">
         <img src={img} alt={id} />
         <div className="price">
           <p>#0{id}</p>
-          <p>{date}</p>
+          <p>{category}</p>
           <p>{price} ETH</p>
         </div>
         <Link to={`/details/${product.id}`}>

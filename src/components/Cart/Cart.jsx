@@ -23,7 +23,7 @@ const Cart = () => {
               <div className="textCart">
                 <div>
                   <p>#0{product.id}</p>
-                  <p>Date of collection - {product.date}</p>
+                  <p>Date of collection - {product.category}</p>
                   <p>Stock available - {product.stock}</p>
                   <p>Contract - {product.contract}</p>
                   <p>Price - {product.price} ETH</p>

@@ -19,9 +19,6 @@ export default function Filter() {
         <p className="linkFilter">
           <Link to={`/2022`}>2022</Link>
         </p>
-        <p className="linkFilter">
-          <Link to={`/2023`}>2023</Link>
-        </p>
       </div>
     </div>
   );

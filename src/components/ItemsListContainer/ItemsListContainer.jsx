@@ -1,9 +1,9 @@
 import "./ItemsListContainer.css";
 import ItemList from "../ItemList/ItemList";
-import { data } from "../../mock/FaceApi";
 import Loader from "../Loader/Loader";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemsListContainer = () => {
   const [productsList, setProductsList] = useState([]);
@@ -11,14 +11,19 @@ const ItemsListContainer = () => {
   const { categoryId } = useParams();
 
   useEffect(() => {
-    data
-      .then((res) =>
+    const db = getFirestore();
+    const itemsCollection = collection(db, "items");
+
+    getDocs(itemsCollection)
+      .then((snapshot) => {
         setProductsList(
           categoryId
-            ? res.filter((product) => product.category == categoryId)
-            : res
-        )
-      )
+            ? snapshot.docs
+                .map((doc) => ({ id: doc.id, ...doc.data() }))
+                .filter((product) => product.category == categoryId)
+            : snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        );
+      })
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [categoryId]);

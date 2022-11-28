@@ -1,11 +1,10 @@
 import "./ItemDetail.css";
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
 
-const ItemDetail = ({ productDetails, onAdd }) => {
-  const { id, price, stock, date, img, contract } = productDetails;
+const ItemDetail = ({ productDetails }) => {
+  const { id, price, stock, category, img, contract } = productDetails;
 
   let [imgDetail, setImgDetail] = useState("." + img);
 
@@ -22,7 +21,7 @@ const ItemDetail = ({ productDetails, onAdd }) => {
         <div className="detailsContainer">
           <div>
             <p>#0{id}</p>
-            <p>Date of collection - {date}</p>
+            <p>Date of collection - {category}</p>
             <p>Stock available - {stock}</p>
             <p>Contract - {contract}</p>
             <p>Price - {price} ETH</p>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { data } from "../../mock/FaceApi";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loader from "../Loader/Loader";
 import "./ItemDetailContainer.css";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [productDetails, setProductDetails] = useState({});
@@ -11,11 +11,18 @@ const ItemDetailContainer = () => {
   const { productId } = useParams();
 
   useEffect(() => {
-    data
-      .then((resp) =>
-        setProductDetails(resp.find((item) => item.id == productId))
-      )
-      .catch((err) => console.log(err))
+    const db = getFirestore();
+    const itemsCollection = collection(db, "items");
+
+    getDocs(itemsCollection)
+      .then((snapshot) => {
+        setProductDetails(
+          snapshot.docs
+            .map((doc) => ({ id: doc.id, ...doc.data() }))
+            .find((item) => item.id == productId)
+        );
+      })
+      .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [productId]);
 
