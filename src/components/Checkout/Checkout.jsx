@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import NotFound from "../NotFound/NotFound";
+import "./Checkout.css";
 
 const Checkout = () => {
   const { cartList, qtyItem, totalPrice } = useCartContext();
@@ -9,29 +10,25 @@ const Checkout = () => {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
-  const [orderId, setOrderId] = useState("");
+
+  const [endBuy, setEndBuy] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const order = {
-        buyer: { name: name, email: email },
-        items: cartList,
-        total: totalPrice,
-      }
-    const db = getFirestore();
-    const ordersCollection = collection(db, 'orders');
-    addDoc(ordersCollection, order).then(({id}) => setOrderId(id))
-
-    /*OBJETO A CREAR
-      {
       buyer: { name: name, email: email },
       items: cartList,
-      total: totalPrice,
-    }*/
+      total: totalPrice(),
+    };
+    const db = getFirestore();
+    const ordersCollection = collection(db, "orders");
+    addDoc(ordersCollection, order);
 
     setName("");
+    setSurname("");
     setEmail("");
+    setEndBuy(true);
   };
 
   return (
@@ -40,7 +37,7 @@ const Checkout = () => {
         <NotFound />
       ) : (
         <div className="cartContainer">
-          <p className="cartTitle">Cart</p>
+          <p className="cartTitle">Checkout</p>
           {cartList.map((product) => (
             <div key={product.id} className="itemContainer">
               <img src={product.img} className="imgCart" alt={product.id} />
@@ -67,32 +64,42 @@ const Checkout = () => {
             </div>
           </div>
 
-          <form className="inputs" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Name"
-              required
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-            />
-            <input
-              type="text"
-              placeholder="Surname"
-              required
-              onChange={(e) => setSurname(e.target.value)}
-              value={surname}
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-            <button className="endBuy" type="submit">
-              End buy
-            </button>
-          </form>
+          {endBuy == false ? (
+            <form onSubmit={handleSubmit}>
+              <div className="nameInputs">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  required
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                />
+                <input
+                  type="text"
+                  placeholder="Surname"
+                  required
+                  onChange={(e) => setSurname(e.target.value)}
+                  value={surname}
+                />
+              </div>
+
+              <input
+                type="email"
+                placeholder="Email"
+                required
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
+              <button className="endBuy" type="submit">
+                End buy
+              </button>
+            </form>
+          ) : (
+            <div className="grayBg">
+              <h2>Thanks for buy!</h2>
+              <p>You will receive your order once the payment is confirmed.</p>
+            </div>
+          )}
         </div>
       )}
     </>
