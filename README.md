@@ -1,4 +1,4 @@
-## Kooks by terry
+## Kooks by Terry
 
 E-commerce made with React
 
