@@ -38,7 +38,7 @@ const Cart = () => {
               </div>
             </div>
           ))}
-          <div className="totalCart">
+          <div className="totalCart1">
             <p className="totalCartTitle">Total</p>
             <div className="totalCartData">
               <p>Total items</p>
@@ -48,6 +48,7 @@ const Cart = () => {
               <p>Total price</p>
               <p>ETH {totalPrice()}</p>
             </div>
+            <h2 className="complete">Go buying!</h2>
             <div className="buttonsCart">
               <p onClick={() => cleanCart()}>Clean cart</p>
               <Link to={"/checkout"}>

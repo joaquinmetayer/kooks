@@ -52,7 +52,7 @@ const Checkout = () => {
               </div>
             </div>
           ))}
-          <div className="totalCart">
+          <div className="totalCart2">
             <p className="totalCartTitle">Total</p>
             <div className="totalCartData">
               <p>Total items</p>
@@ -66,6 +66,7 @@ const Checkout = () => {
 
           {endBuy == false ? (
             <form onSubmit={handleSubmit}>
+              <h2 className="complete">Complete the form and finish!</h2>
               <div className="nameInputs">
                 <input
                   type="text"

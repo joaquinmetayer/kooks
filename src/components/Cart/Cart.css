@@ -51,8 +51,12 @@
   transition: 0.1s;
   background-color: #ffffff40;
 }
-.totalCart {
+.totalCart1 {
   width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .totalCartTitle {
   font-size: 25px;
