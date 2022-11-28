@@ -39,6 +39,9 @@ export default function ItemCount({ product, onAdd }) {
           <Link to={"/cart"}>
             <p className="buttonBuy">Go cart</p>
           </Link>
+          <Link to={"/"}>
+            <p className="buttonBuy">Back shop</p>
+          </Link>
         </>
       ) : (
         <>
@@ -54,6 +57,9 @@ export default function ItemCount({ product, onAdd }) {
           <p className="buttonBuy" onClick={() => onAdd(toCart)}>
             Add to cart
           </p>
+          <Link to={"/"}>
+            <p className="buttonBuy">Back shop</p>
+          </Link>
         </>
       )}
     </>

@@ -12,17 +12,16 @@ const ItemsListContainer = () => {
 
   useEffect(() => {
     data
-      .then(
-        (res) =>
-          setProductsList(
-            categoryId
-              ? res.filter((product) => product.category == categoryId)
-              : res
-          )
+      .then((res) =>
+        setProductsList(
+          categoryId
+            ? res.filter((product) => product.category == categoryId)
+            : res
+        )
       )
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
-  },[categoryId]);
+  }, [categoryId]);
 
   return (
     <div className="itemsContainer">
