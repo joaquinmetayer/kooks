@@ -10,22 +10,4 @@ Based on NFT real project named "Kooks by Terry", see original project here http
 
 <img src="./src/assets/readme/readme2.png">
 
-<img src="./src/assets/readme/readme3.png">
-
-<img src="./src/assets/readme/readme4.png">
-
-<img src="./src/assets/readme/readme5.png">
-
-<img src="./src/assets/readme/readme6.png">
-
-<img src="./src/assets/readme/readme7.png">
-
-<img src="./src/assets/readme/readme8.png">
-
-<img src="./src/assets/readme/readme9.png">
-
-<img src="./src/assets/readme/readme10.png">
-
-<img src="./src/assets/readme/readme11.png">
-
 <img src="./src/assets/readme/readme12.png">

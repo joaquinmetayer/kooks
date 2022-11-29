@@ -27,6 +27,7 @@ const ItemsListContainer = () => {
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [categoryId]);
+  // when category id change, reload and set a new products list on the app
 
   return (
     <div className="itemsContainer">
