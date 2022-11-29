@@ -40,8 +40,10 @@ const Checkout = () => {
           <p className="cartTitle">Checkout</p>
           {cartList.map((product) => (
             <div key={product.id} className="itemContainer">
-              <img src={product.img} className="imgCart" alt={product.id} />
-              <div className="textCart">
+              <div className="itemContainerLeft">
+                <img src={product.img} className="imgCart" alt={product.id} />
+              </div>
+              <div className="textCart itemContainerRight">
                 <div>
                   <p>#0{product.id}</p>
                   <p>Date of collection - {product.category}</p>

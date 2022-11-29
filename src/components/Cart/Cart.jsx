@@ -17,10 +17,12 @@ const Cart = () => {
           <p className="cartTitle">Cart</p>
           {cartList.map((product) => (
             <div key={product.id} className="itemContainer">
-              <Link to={`/details/${product.id}`}>
-                <img src={product.img} className="imgCart" alt={product.id} />
-              </Link>
-              <div className="textCart">
+              <div className="itemContainerLeft">
+                <Link to={`/details/${product.id}`}>
+                  <img src={product.img} alt={product.id} className="imgCart"/>
+                </Link>
+              </div>
+              <div className="textCart itemContainerRight">
                 <div>
                   <p>#0{product.id}</p>
                   <p>Date of collection - {product.category}</p>
@@ -51,9 +53,7 @@ const Cart = () => {
             <h2 className="complete">Go buying!</h2>
             <div className="buttonsCart">
               <p onClick={() => cleanCart()}>Clean cart</p>
-              <Link to={"/checkout"}>
-                Checkout
-              </Link>
+              <Link to={"/checkout"}>Checkout</Link>
             </div>
           </div>
         </div>
