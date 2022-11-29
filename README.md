@@ -10,4 +10,6 @@ Based on NFT real project named "Kooks by Terry", see original project here http
 
 <img src="./src/assets/readme/readme12.png">
 
+Product list saved and saving orders on Firebase.
+
 <img src="./src/assets/readme/readme112.png">
