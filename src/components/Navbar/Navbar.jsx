@@ -12,7 +12,6 @@ export default function Navbar() {
         <h5>
           <Link to={"/"}>Home</Link>
         </h5>
-
         <h5>
           <Link to={"/about"}>About</Link>
         </h5>

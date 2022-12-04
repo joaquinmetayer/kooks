@@ -1,4 +1,5 @@
 import React from "react";
+// import logo and img
 import logoGif from "../../assets/logogif.gif";
 import artistPh from "../../assets/img/artist.jpeg";
 import './About.css'

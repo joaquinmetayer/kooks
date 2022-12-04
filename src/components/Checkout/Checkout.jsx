@@ -10,7 +10,6 @@ const Checkout = () => {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
-
   const [endBuy, setEndBuy] = useState(false);
 
   const handleSubmit = (e) => {
