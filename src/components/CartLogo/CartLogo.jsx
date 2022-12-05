@@ -1,5 +1,4 @@
 import { MdOutlineShoppingCart } from "react-icons/md";
-import React, { useState } from "react";
 import "./CartLogo.css";
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";

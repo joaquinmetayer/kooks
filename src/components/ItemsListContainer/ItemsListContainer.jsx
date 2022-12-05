@@ -19,8 +19,11 @@ const ItemsListContainer = () => {
         setProductsList(
           categoryId
             ? snapshot.docs
+                // get all products
                 .map((doc) => ({ id: doc.id, ...doc.data() }))
+                // filter by category.id
                 .filter((product) => product.category == categoryId)
+                // else print all products
             : snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
         );
       })
