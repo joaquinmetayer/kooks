@@ -17,6 +17,7 @@ const CartContextProvider = ({ children }) => {
     if (index > -1) {
       // go to "toCart" and save on variable
       const oldQty = cartList[index].toCart;
+      // getting theh first item
       cartList.splice(index, 1);
       // save on list modifying qty
       setCartList([
@@ -28,7 +29,6 @@ const CartContextProvider = ({ children }) => {
       setCartList([...cartList, { ...product, toCart: product.toCart }]);
     }
   };
-
   const cleanCart = () => {
     setCartList([]);
   };
@@ -36,7 +36,7 @@ const CartContextProvider = ({ children }) => {
     // sell on cartlist all items do not equail to product id (product for delete)
     setCartList(cartList.filter((product) => product.id !== id));
   };
-  const qtyItem = (product) => {
+  const qtyItem = () => {
     return cartList.reduce((acum, product) => acum = acum + product.toCart, 0 )
   };
   const totalPrice = () => {
